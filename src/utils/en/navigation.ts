@@ -27,6 +27,8 @@ const socialLinks = {
   facebook: "#",
   x: "#",
   github: "#",
+  google: "#",
+  slack: "#",
 };
 
 export default {
