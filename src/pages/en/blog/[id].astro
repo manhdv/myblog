@@ -20,7 +20,7 @@ export async function getStaticPaths() {
   return blogPosts.map((post) => {
     const idWithoutLang = post.id.replace(/^en\//, ""); // Remove the "en/" prefix
     return {
-      params: { id: idWithoutLang },
+      params: { lang: "en", id: idWithoutLang },
       props: { post },
     };
   });
@@ -51,6 +51,7 @@ const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
 
 <MainLayout
   title={pageTitle}
+  lang="en"
   customDescription={metaDescription}
   customOgTitle={ogTitle}
   structuredData={{
@@ -68,12 +69,12 @@ const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
       name: SITE.title,
       logo: {
         "@type": "ImageObject",
-        url: "https://screwfast.uk/favicon.ico",
+        url: "https://dcaordie.com/favicon.ico",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://screwfast.uk/blog/${post.id.replace(/^en\//, "")}`,
+      "@id": `https://dcaordie.com/en/blog/${post.id.replace(/^en\//, "")}`,
     },
   }}
 >

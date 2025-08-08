@@ -17,7 +17,7 @@ const footerLinks = [
   {
     section: "Về trang web",
     links: [
-      { name: "Về chúng tôi", url: "#" },
+      { name: "Về chúng tôi", url: "/vi/about" },
       { name: "Blog", url: "/vi/blog" },
     ],
   },

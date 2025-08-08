@@ -17,7 +17,7 @@ const footerLinks = [
   {
     section: "About",
     links: [
-      { name: "About Us", url: "#" },
+      { name: "About Us", url: "/en/about" },
       { name: "Blog", url: "/en/blog" },
     ],
   },

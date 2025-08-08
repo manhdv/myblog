@@ -8,22 +8,22 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Get all blogs post in French and sort them based on publish date
+// Get all blogs post in Vietnamese and sort them based on publish date
 
-const frenchBlogEntries = await getCollection("blog", ({ id }) => {
+const vietBlogEntries = await getCollection("blog", ({ id }) => {
   return id.startsWith("vi/");
 });
 
-const frenchInsightsEntries = await getCollection("insights", ({ id }) => {
+const vietInsightsEntries = await getCollection("insights", ({ id }) => {
   return id.startsWith("vi/");
 });
 
-const blogPosts: CollectionEntry<"blog">[] = frenchBlogEntries.sort(
+const blogPosts: CollectionEntry<"blog">[] = vietBlogEntries.sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 // Get all insights posts
-const insightPosts: CollectionEntry<"insights">[] = frenchInsightsEntries;
+const insightPosts: CollectionEntry<"insights">[] = vietInsightsEntries;
 
 // Separate the most recent post from others
 const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
@@ -51,19 +51,19 @@ const ogTitle = "Blog de l'Industrie de la Construction | ScrewFast";
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/vi/blog",
-    url: "https://screwfast.uk/vi/blog",
-    name: "Blog | ScrewFast",
+    "@id": "https://dcaordie.com/vi/blog",
+    url: "https://dcaordie.com/vi/blog",
+    name: "Blog | DCAorDie",
     description:
       "Restez informé des dernières tendances et évolutions dans le secteur de la construction avec les analyses de l'équipe d'experts de ScrewFast.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk/vi",
-      name: "ScrewFast",
+      url: "https://dcaordie.com/vi",
+      name: "DCAorDie",
       description:
         "ScrewFast propose des outils matériels de premier ordre et des services de construction experts pour répondre à tous vos besoins de projet.",
     },
-    inLanguage: "vi",
+    inLanguage: "vi-VN",
   }}
 >
   <section

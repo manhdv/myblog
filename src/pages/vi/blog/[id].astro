@@ -13,7 +13,7 @@ import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
 // Update getStaticPaths for French posts
-export async function getStaticPaths() {
+/* export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ id }) =>
     id.startsWith("vi/")
   );
@@ -24,6 +24,21 @@ export async function getStaticPaths() {
       props: { post },
     };
   });
+} */
+export async function getStaticPaths() {
+  console.log(">>> getStaticPaths START");
+  
+  const posts = await getCollection("blog");
+  console.log("Posts:", posts.map(p => p.id));
+
+  const paths = posts.map(post => {
+    const idWithoutLang = post.id.replace(/^vi\//, "").replace(/^en\//, "");
+    console.log("Slug computed:", idWithoutLang);
+    return { params: { id: idWithoutLang }, props: { post } };
+  });
+
+  console.log(">>> getStaticPaths END", paths);
+  return paths;
 }
 
 const { post } = Astro.props;
@@ -64,12 +79,12 @@ const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
       name: SITE.title,
       logo: {
         "@type": "ImageObject",
-        url: "https://screwfast.uk/favicon.ico",
+        url: "https://dcaordie.com/favicon.ico",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://screwfast.uk/vi/blog/${post.id.replace(/^vi\//, "")}`,
+      "@id": `https://dcaordie.com/vi/blog/${post.id.replace(/^vi\//, "")}`,
     },
     inLanguage: "vi",
   }}
