@@ -1,26 +1,26 @@
 
 const navBarLinks = [
-  { name: "Accueil", url: "/fr" },
-  { name: "Produits", url: "/fr/products" },
-  { name: "Services", url: "/fr/services" },
-  { name: "Blog", url: "/fr/blog" },
-  { name: "Contact", url: "/fr/contact" },
+  { name: "Accueil", url: "/vi" },
+  { name: "Produits", url: "/vi/products" },
+  { name: "Services", url: "/vi/services" },
+  { name: "Blog", url: "/vi/blog" },
+  { name: "Contact", url: "/vi/contact" },
 ];
 
 const footerLinks = [
   {
     section: "Écosystème",
     links: [
-      { name: "Documentation", url: "/fr/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/fr/products" },
-      { name: "Services de Construction", url: "/fr/services" },
+      { name: "Documentation", url: "/vi/welcome-to-docs/" },
+      { name: "Outils et Équipements", url: "/vi/products" },
+      { name: "Services de Construction", url: "/vi/services" },
     ],
   },
   {
     section: "Société",
     links: [
       { name: "À propos de nous", url: "#" },
-      { name: "Blog", url: "/fr/blog" },
+      { name: "Blog", url: "/vi/blog" },
       { name: "Carrières", url: "#" },
       { name: "Clients", url: "#" },
     ],
