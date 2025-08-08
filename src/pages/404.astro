@@ -43,7 +43,9 @@ const btnTitle = "Quay lại";
 <script>
   const goBackButton = document.getElementById("go-back");
 
-  goBackButton.addEventListener("click", () => {
-    history.back();
-  });
+  if (goBackButton) {
+    goBackButton.addEventListener("click", () => {
+      history.back();
+    });
+  }
 </script>
