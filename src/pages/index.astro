@@ -2,48 +2,41 @@
 // Import the necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
-import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
-import faqs from "@data/vi/faqs.json";
-import features from "@data/vi/features.json";
-import pricing from "@data/vi/pricing.json";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
 import featureImage from "@images/features-image.avif";
 import construction from "@images/construction-image.avif";
 import tools from "@images/automated-tools.avif";
 import dashboard from "@images/dashboard-image.avif";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { partnersData } from "@/data_files/constants";
+
 ---
 
 <MainLayout lang="vi">
-<!--   <AnnouncementBanner
+  <!-- <AnnouncementBanner
     btnId="dismiss-button"
     btnTitle="Tìm hiểu triết lý DCA or Die"
-    url="/vi/about"
-  />
- -->
+    url="about"
+  /> -->
+
   <HeroSection
-    title=`<span class="text-yellow-500 dark:text-yellow-400">DCA or Die</span>  Đầu tư dài hạn, không fomo`
-    subTitle="Xây dựng tài sản bền vững qua DCA, lãi kép và doanh nghiệp chất lượng."
+    title=`<span class="text-yellow-500 dark:text-yellow-400">DCA or Die</span> Đầu tư dài hạn, không FOMO`
+    subTitle="Xây dựng sự giàu có bền vững qua DCA, lãi kép và doanh nghiệp chất lượng."
     primaryBtn="Bắt đầu đọc blog"
-    primaryBtnURL="/vi/blog"
+    primaryBtnURL="blog"
     secondaryBtn="Về chúng tôi"
-    secondaryBtnURL="/vi/about"
+    secondaryBtnURL="about"
     withReview={false}
     src={heroImage}
-    alt="Hình minh họa về đầu tư dài hạn"
+    alt="Minh họa về đầu tư dài hạn"
   />
 
   <FeaturesGeneral
     title="Triết lý DCA or Die"
-    subTitle="Đầu tư định kỳ vào doanh nghiệp chất lượng, giữ dài hạn, tận dụng sức mạnh lãi kép."
+    subTitle="Đầu tư định kỳ vào doanh nghiệp chất lượng, nắm giữ dài hạn, tận dụng sức mạnh của lãi kép."
     src={featureImage}
     alt="Biểu đồ tăng trưởng dài hạn"
     features={features}
@@ -53,8 +46,8 @@ import { partnersData } from "@/data_files/constants";
     title="Các trụ cột chiến lược"
     tabs={[
       {
-        heading: "DCA thông minh",
-        content: "Đầu tư định kỳ bất kể biến động ngắn hạn.",
+        heading: "DCA Thông minh",
+        content: "Đầu tư đều đặn bất chấp biến động ngắn hạn.",
         svg: "tools",
         src: tools,
         alt: "Minh họa DCA",
@@ -69,11 +62,11 @@ import { partnersData } from "@/data_files/constants";
         second: true,
       },
       {
-        heading: "Giữ dài hạn",
-        content: "Không trade ngắn hạn, không fomo, không margin.",
+        heading: "Nắm giữ dài hạn",
+        content: "Không giao dịch ngắn hạn, không FOMO, không vay margin.",
         svg: "house",
         src: construction,
-        alt: "Giữ vững chiến lược",
+        alt: "Cam kết với chiến lược",
       },
     ]}
   />

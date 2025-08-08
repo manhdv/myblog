@@ -1,25 +1,17 @@
 ---
 import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
 import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
-import enStrings from "@utils/en/navigation.ts";
-import viStrings from "@/utils/vi/navigation.ts";
+import strings from "@/utils/navigation";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
 
-const strings = Astro.currentLocale === "vi" ? viStrings : enStrings;
 
-const sectionThreeTitle = Astro.currentLocale === "vi"
-  ? "Theo dõi cập nhật"
-  : "Stay up to date";
+const sectionThreeTitle = "Theo dõi cập nhật";
 
-const sectionThreeContent = Astro.currentLocale === "vi"
-  ? "Nhận thông tin về công cụ mới và ưu đãi đặc biệt."
-  : "Stay updated with the latest tools and exclusive deals.";
+const sectionThreeContent ="Nhận thông tin về công cụ mới và ưu đãi đặc biệt.";
 
-const crafted = Astro.currentLocale === "vi"
-  ? "Phát triển bởi"
-  : "Crafted by";
+const crafted = "Phát triển bởi";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
