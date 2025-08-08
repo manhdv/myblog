@@ -27,10 +27,13 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: "vi", // All urls that don't contain language prefix will be treated as default locale
-        locales: {
-          en: "en", // The `defaultLocale` value must present in `locales` keys
-          vi: "vi",
+        defaultLocale: "vi",
+        locales: ["vi", "en"],
+        fallback: {
+          en: "vi",  // or vice versa depending on your logic
+        },
+        routing: {
+          prefixDefaultLocale: true, // you want /vi/ and /en/ prefixes always
         },
       },
     }),
