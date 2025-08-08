@@ -1,0 +1,29 @@
+{
+  "subTitle": "Hỏi chúng tôi mọi thứ về triết lý DCA và cách đầu tư dài hạn, nhận câu trả lời thẳng và rõ ràng.",
+  "faqs": [
+    {
+      "question": "DCA là gì?",
+      "answer": "DCA (Dollar-Cost Averaging) là chiến lược đầu tư định kỳ một số tiền cố định vào tài sản bất kể giá lên hay xuống. Mục tiêu là giảm rủi ro bắt đỉnh và tích lũy tài sản theo thời gian."
+    },
+    {
+      "question": "Tại sao lại chọn DCA thay vì bắt đáy?",
+      "answer": "Bắt đáy đòi hỏi dự đoán thời điểm thị trường — hầu hết mọi người đều thất bại ở khoản này. DCA bỏ qua việc dự đoán, tập trung vào kỷ luật và thời gian nắm giữ để tạo lợi nhuận."
+    },
+    {
+      "question": "Danh mục mẫu của DCA or Die gồm những gì?",
+      "answer": "Danh mục mẫu gồm cổ phiếu chất lượng cao ở Việt Nam và Mỹ, cùng một số ETF. Mục tiêu là giữ lâu dài, không giao dịch ngắn hạn."
+    },
+    {
+      "question": "Có thể áp dụng DCA với bao nhiêu tiền?",
+      "answer": "Bất kỳ số tiền nào cũng có thể bắt đầu — từ vài trăm nghìn đồng mỗi tháng. Quan trọng là đều đặn và chọn tài sản tốt."
+    },
+    {
+      "question": "Bao lâu nên mua một lần?",
+      "answer": "Phổ biến nhất là hàng tháng, trùng với chu kỳ nhận lương. Một số người chọn hàng quý hoặc tùy vào dòng tiền cá nhân."
+    },
+    {
+      "question": "DCA có rủi ro không?",
+      "answer": "Có. DCA không loại bỏ rủi ro tài sản giảm giá dài hạn. Nếu chọn nhầm cổ phiếu yếu, bạn vẫn có thể lỗ. Cần nghiên cứu kỹ và đa dạng hóa."
+    }
+  ]
+}

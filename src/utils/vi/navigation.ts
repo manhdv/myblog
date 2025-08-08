@@ -1,28 +1,24 @@
-
 const navBarLinks = [
-  { name: "Accueil", url: "/vi" },
-  { name: "Produits", url: "/vi/products" },
-  { name: "Services", url: "/vi/services" },
+  { name: "Trang chủ", url: "/vi" },
   { name: "Blog", url: "/vi/blog" },
-  { name: "Contact", url: "/vi/contact" },
+  { name: "Danh mục", url: "/vi/portfolio" },
+  { name: "Triết lý", url: "/vi/philosophy" },  
+  { name: "Liên hệ", url: "/vi/contact" },
 ];
 
 const footerLinks = [
   {
-    section: "Écosystème",
+    section: "Hệ sinh thái",
     links: [
-      { name: "Documentation", url: "/vi/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/vi/products" },
-      { name: "Services de Construction", url: "/vi/services" },
+      { name: "Triết lý", url: "/vi/philosophy" },
+      { name: "Danh mục", url: "/vi/portfolio" },
     ],
   },
   {
-    section: "Société",
+    section: "Về trang web",
     links: [
-      { name: "À propos de nous", url: "#" },
+      { name: "Về chúng tôi", url: "#" },
       { name: "Blog", url: "/vi/blog" },
-      { name: "Carrières", url: "#" },
-      { name: "Clients", url: "#" },
     ],
   },
 ];
@@ -30,9 +26,7 @@ const footerLinks = [
 const socialLinks = {
   facebook: "#",
   x: "#",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "#",
-  slack: "#",
+  github: "#",
 };
 
 export default {

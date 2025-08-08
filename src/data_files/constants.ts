@@ -3,13 +3,14 @@ import ogImageSrc from "@images/social.png";
 
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "DCAOrDie",
+  tagline: "Invest Consistently or Not at All",
+  description: "DCAOrDie shares the philosophy, portfolio, and insights on long-term investing through Dollar-Cost Averaging. Learn the approach, explore the portfolio, and apply the strategy for sustainable wealth growth.",
+  description_short: "Philosophy, portfolio, and insights on long-term investing via Dollar-Cost Averaging.",
+  url: "https://dcaordie.com",
+  author: "Mage",
 };
+
 
 export const SEO = {
   title: SITE.title,
