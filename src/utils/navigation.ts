@@ -1,5 +1,5 @@
 const navBarLinks = [
-  { name: "Trang chủ", url: "" },
+  { name: "Trang chủ", url: "/" },
   { name: "Blog", url: "/blog" },
   { name: "Danh mục", url: "/portfolio" },
   { name: "Triết lý", url: "/philosophy" },  
