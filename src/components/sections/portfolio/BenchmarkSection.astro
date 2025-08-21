@@ -1,0 +1,35 @@
+---
+---
+
+<section>
+  <h2>Benchmark</h2>
+  <canvas id="chart"></canvas>
+
+  <!-- Chart.js từ CDN -->
+  <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Script để vẽ chart -->
+  <script is:inline>
+    const ctx = document.getElementById("chart");
+    new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr"],
+        datasets: [
+          {
+            label: "DCA or Die",
+            data: [10, 15, 20, 17],
+            borderColor: "rgb(75, 192, 192)",
+            tension: 0.1
+          },
+          {
+            label: "VNINDEX",
+            data: [12, 14, 18, 16],
+            borderColor: "rgb(255, 99, 132)",
+            tension: 0.1
+          }
+        ]
+      }
+    });
+  </script>
+</section>
