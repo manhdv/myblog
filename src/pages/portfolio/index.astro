@@ -1,78 +1,57 @@
 ---
-// Import the necessary components
+// Import necessary components
 import MainLayout from "@/layouts/MainLayout.astro";
-import StatsSection from "@components/sections/portfolio/StatsSection.astro";
-import BenchmarkSection from "@components/sections/portfolio/BenchmarkSection.astro";
-import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import FAQ from "@components/sections/misc/FAQ.astro";
-import heroImage from "@images/hero-image.avif";
-import faqs from "@data/faqs.json";
-import features from "@data/features.json";
-import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
+import MainSection from "@components/ui/blocks/MainSection.astro";
+import LeftSection from "@components/ui/blocks/LeftSection.astro";
+import RightSection from "@components/ui/blocks/RightSection.astro";
+import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+
+// Import necessary images
+import blueprints from "@images/blueprints-image.avif";
+import personWorking from "@images/person-working.avif";
+import beforeAfter from "@images/before-after.avif";
+import constructionWorkers from "@images/construction-workers.avif";
+import aerialView from "@images/aerial-view.avif";
+import usingTools from "@images/using-tools.avif";
+import progressBuilding from "@images/progress-building.avif";
+import underConstruction from "@images/under-construction.avif";
+import { SITE } from "@data/constants";
 
 ---
 
-<MainLayout lang="vi">
-  <!-- <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Tìm hiểu triết lý DCA or Die"
-    url="about"
-  /> -->
+<MainLayout
+  
+>
+  {/* MainSection is the introductory section of the page, it also contains a CTA button */}
 
-  <StatsSection
-    title="Hiệu quả đầu tư"
-    subTitle="Các chỉ số chính"
-    mainStatTitle="17%"
-    mainStatSubTitle="Lũy kế từ 01/01/2025"
+  {/* RightSection and LeftSection contain details about various services along with pertinent imagery.
+  They alternate for variety in design.
+  The 'btnExists' property is used to toggle the display of a button in these sections.
+  When btnExists={true}, a button is displayed.
+  This can be used to link to more detailed information or related resources.
+  RightSection can also conditionally render one or two images based on the 'single' property.
+  If 'single' is true, it displays one image, otherwise it displays two.
+  */}
+  
+  {/* FeaturesStats section showcases essential stats valuable to users */}
+  <FeaturesStats
+    title="By the Numbers"
+    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
+    mainStatTitle="96%"
+    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
     stats={[
-      { stat: "17%", description: "Tăng trưởng YTD" },
-      { stat: "12%", description: "CAGR 5 năm" },
-      { stat: "-18%", description: "Max Drawdown" },
-    ]}
-  />
-
-<BenchmarkSection/>
-
-  <FeaturesGeneral
-    title="Triết lý DCA or Die"
-    subTitle="Đầu tư định kỳ vào doanh nghiệp chất lượng, nắm giữ dài hạn, tận dụng sức mạnh của lãi kép."
-    src={featureImage}
-    alt="Biểu đồ tăng trưởng dài hạn"
-    features={features}
-  />
-
-  <FeaturesNavs
-    title="Các trụ cột chiến lược"
-    tabs={[
       {
-        heading: "DCA Thông minh",
-        content: "Đầu tư đều đặn bất chấp biến động ngắn hạn.",
-        svg: "tools",
-        src: tools,
-        alt: "Minh họa DCA",
-        first: true,
+        stat: "99.8%",
+        description: "project completion rate",
       },
       {
-        heading: "Phân tích cơ bản",
-        content: "Tập trung vào báo cáo tài chính và chất lượng doanh nghiệp.",
-        svg: "dashboard",
-        src: dashboard,
-        alt: "Phân tích dữ liệu",
-        second: true,
+        stat: "5,000+",
+        description: "successful installations",
       },
       {
-        heading: "Nắm giữ dài hạn",
-        content: "Không giao dịch ngắn hạn, không FOMO, không vay margin.",
-        svg: "house",
-        src: construction,
-        alt: "Cam kết với chiến lược",
+        stat: "85%",
+        description: "client growth year-over-year",
       },
     ]}
   />
-
-  <FAQ title="Câu hỏi thường gặp" faqs={faqs} />
 </MainLayout>
