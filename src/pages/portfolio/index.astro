@@ -1,0 +1,76 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import StatsSection from "@components/sections/portfolio/StatsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import heroImage from "@images/hero-image.avif";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import featureImage from "@images/features-image.avif";
+import construction from "@images/construction-image.avif";
+import tools from "@images/automated-tools.avif";
+import dashboard from "@images/dashboard-image.avif";
+
+---
+
+<MainLayout lang="vi">
+  <!-- <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Tìm hiểu triết lý DCA or Die"
+    url="about"
+  /> -->
+
+  <StatsSection
+    title="Hiệu quả đầu tư"
+    subTitle="Các chỉ số chính"
+    mainStatTitle="17%"
+    mainStatSubTitle="Lũy kế từ 01/01/2025"
+    stats={[
+      { stat: "17%", description: "Tăng trưởng YTD" },
+      { stat: "12%", description: "CAGR 5 năm" },
+      { stat: "-18%", description: "Max Drawdown" },
+    ]}
+  />
+
+
+  <FeaturesGeneral
+    title="Triết lý DCA or Die"
+    subTitle="Đầu tư định kỳ vào doanh nghiệp chất lượng, nắm giữ dài hạn, tận dụng sức mạnh của lãi kép."
+    src={featureImage}
+    alt="Biểu đồ tăng trưởng dài hạn"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title="Các trụ cột chiến lược"
+    tabs={[
+      {
+        heading: "DCA Thông minh",
+        content: "Đầu tư đều đặn bất chấp biến động ngắn hạn.",
+        svg: "tools",
+        src: tools,
+        alt: "Minh họa DCA",
+        first: true,
+      },
+      {
+        heading: "Phân tích cơ bản",
+        content: "Tập trung vào báo cáo tài chính và chất lượng doanh nghiệp.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "Phân tích dữ liệu",
+        second: true,
+      },
+      {
+        heading: "Nắm giữ dài hạn",
+        content: "Không giao dịch ngắn hạn, không FOMO, không vay margin.",
+        svg: "house",
+        src: construction,
+        alt: "Cam kết với chiến lược",
+      },
+    ]}
+  />
+
+  <FAQ title="Câu hỏi thường gặp" faqs={faqs} />
+</MainLayout>
