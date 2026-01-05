@@ -12,7 +12,10 @@ const posts = (await getCollection('blog'))
 
 <BaseLayout>
 	<main
-		class="app-container flex flex-col gap-12 justify-center py-36 md:py-48 pt-44 md:pt-56 relative"
+		class="app-container flex flex-col gap-12 justify-center
+         pt-32 md:pt-40
+         pb-24 md:pb-32
+         relative"
 	>
 		<div>
 			<p class="block text-3xl opacity-70 mt-9 mb-4">Chào mừng đến với</p>
@@ -47,7 +50,9 @@ const posts = (await getCollection('blog'))
 	</main>
 
 	<!-- Recent Posts Section -->
-	<section class="app-container pb-42">
+	<section class="app-container
+         pt-24 md:pt-32
+         pb-32 md:pb-40">
 		<h2 class="section-title">Bài mới</h2>
 		<div class="posts-grid-container">
 			{posts.map((post) => <BlogCard post={post} />)}
