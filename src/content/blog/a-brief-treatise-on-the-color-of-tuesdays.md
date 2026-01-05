@@ -4,6 +4,7 @@ description: |
   A completely serious and not-at-all-scientific investigation into why Tuesday feels overwhelmingly beige.
   It is the colour of lukewarm tea, forgotten spreadsheets, and a general lack of drama.
 pubDate: 'Aug 28 2025'
+coverImage: 'cover.jpg'
 coverImageCredit: 'Sindy Süßengut, Unsplash'
 ---
 

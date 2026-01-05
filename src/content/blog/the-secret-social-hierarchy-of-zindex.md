@@ -4,6 +4,7 @@ description: |
   Uncovering the hidden, dramatic social order governed by the CSS z-index property.
   From the humble static div to the tyrannical modal overlay, every element knows its place.
 pubDate: 'Sep 05 2025'
+coverImage: 'cover3.jpg'
 coverImageCredit: 'Evgeni Tcherkasski, Unsplash'
 ---
 

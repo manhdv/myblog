@@ -4,6 +4,7 @@ description: |
   An exploration of a Wi-Fi password as a misunderstood work of art, a modern haiku of our times.
   It’s a tragic tale of deep symbolism, late-night cravings, and guests who just want the internet.
 pubDate: 'Aug 21 2025'
+coverImage: 'cover1.jpg'
 coverImageCredit: 'Y S (santonii), Unsplash'
 ---
 
