@@ -34,7 +34,7 @@ export const WebsiteLinks = [
 		url: 'blog',
 	},
 	{
-		name: 'Về tôi',
+		name: 'Giới thiệu',
 		url: 'about',
 	},
 ]
