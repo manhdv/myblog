@@ -12,19 +12,15 @@ export const SITE_BASE = ''
 export const SocialLinks = [
 	{
 		name: 'GitHub',
-		url: 'https://github.com/yashjawale',
+		url: 'https://github.com/',
 	},
 	{
 		name: 'LinkedIn',
-		url: 'https://www.linkedin.com/in/yashjawale/',
+		url: 'https://www.linkedin.com/',
 	},
 	{
 		name: 'X / Twitter',
-		url: 'https://twitter.com/imyashjawale',
-	},
-	{
-		name: 'Instagram',
-		url: 'https://instagram.com/imyashjawale',
+		url: 'https://twitter.com/',
 	},
 ]
 
