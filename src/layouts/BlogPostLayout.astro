@@ -35,9 +35,13 @@ const blogImages = import.meta.glob<{ default: ImageMetadata }>(
 )
 
 const coverImagePath = coverImage
-  ? `/src/assets/blogimages/${coverImage}`
-  : null
+	? `/src/assets/blogimages/${coverImage}`
+	: null
 
+const coverImageSrc =
+	coverImagePath && blogImages[coverImagePath]
+		? blogImages[coverImagePath]()
+		: null
 
 const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 	.utc()
@@ -94,13 +98,9 @@ const lastModified = dayjs(remarkPluginFrontmatter.lastModified)
 						</div>
 
 						{
-							blogImages[coverImagePath] && (
+							coverImageSrc && (
 								<>
-									<Image
-										src={blogImages[coverImagePath]()}
-										alt={title}
-										class="rounded-lg"
-									/>
+									<Image src={coverImageSrc} alt={title} class="rounded-lg" />
 									{coverImageCredit && (
 										<p class="mt-2 mb-8 opacity-80 italic text-sm">
 											Image Credit: {coverImageCredit}
