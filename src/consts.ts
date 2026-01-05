@@ -1,9 +1,8 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'Saral Theme'
-export const SITE_DESCRIPTION =
-	'A simple theme for personal blog sites, created for Astro framework'
+export const SITE_TITLE = 'DCA Or Die'
+export const SITE_DESCRIPTION = 'Blog đầu tư cá nhân'
 
 // If you deploy to a subdirectory, set the `WEBSITE_BASE` here.
 // e.g. '/blog' if you are deploying to example.com/blog
@@ -31,7 +30,7 @@ export const SocialLinks = [
 
 export const WebsiteLinks = [
 	{
-		name: 'Home',
+		name: 'Trang chủ',
 		url: '',
 	},
 	{
@@ -39,7 +38,7 @@ export const WebsiteLinks = [
 		url: 'blog',
 	},
 	{
-		name: 'About',
+		name: 'Về tôi',
 		url: 'about',
 	},
 ]

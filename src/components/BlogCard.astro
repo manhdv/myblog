@@ -10,20 +10,13 @@ const blogImages = import.meta.glob<{ default: ImageMetadata }>(
 	'/src/assets/blogimages/*.{jpeg,jpg,png,gif}'
 )
 
-
-console.log('cover from frontmatter:', post.data.coverImage)
-
 const coverImagePath = post.data.coverImage
-  ? `/src/assets/blogimages/${post.data.coverImage}`
-  : null
-
-console.log('resolved path:', coverImagePath)
-console.log('glob keys:', Object.keys(blogImages))
+	? `/src/assets/blogimages/${post.data.coverImage}`
+	: null
 
 if (import.meta.env.DEV && coverImagePath && !blogImages[coverImagePath]) {
-  throw new Error(`Missing blog cover image: ${coverImagePath}`)
+	throw new Error(`Missing blog cover image: ${coverImagePath}`)
 }
-
 ---
 
 <a
